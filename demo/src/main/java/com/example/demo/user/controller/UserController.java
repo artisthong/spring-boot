@@ -2,6 +2,8 @@ package com.example.demo.user.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +18,8 @@ import com.example.demo.user.vo.User;
 @RestController
 @RequestMapping("/users")
 public class UserController {
+//	private Logger logger = LoggerFactory.getLogger(UserController.class);
+	
 	private UserService userService;
 	
 	public UserController(UserService userService){
@@ -28,8 +32,12 @@ public class UserController {
 	}
 
 	@RequestMapping(path="/{id}", method=RequestMethod.GET)
-	public User getUser(@PathVariable int id){
-		return userService.getUserForId(id);
+	public User getUser(@PathVariable int id, HttpServletRequest request){
+		User user = userService.getUserForId(id);
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("user",user.getName());
+		return user;
 	}
 	
 	@RequestMapping(path="",method=RequestMethod.POST)
