@@ -17,23 +17,15 @@ spring:
     console:
       enabled: true 
       path: /h2-console
-  session:
-    store-type: jdbc     
+       
 test: 
   env : Localhost      
     
 logging:
   file: ./log/${spring.application.name}.log    
     
-security:
-  basic:
-    enabled: true
-  user:
-    name: admin
-    password: admin  
-  #enable-csrf: true
-  #headers:
-    #xss: true  
+    
+    
     # 스페이스 구분자 2번이 하위 레벨로 구분함(yml)
     
     #localhost:8080/env
