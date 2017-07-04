@@ -1,0 +1,41 @@
+debug : true
+
+spring:
+  application:
+    name: spring-boot-workshop-localhost
+  datasource:
+    #initialize: false  운영단 필수 옵션
+    platform: h2
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:  
+    tomcat:
+      validation-query: SELECT 1 
+      initial-size: 2
+      max-active: 10
+  h2:
+    console:
+      enabled: true 
+      path: /h2-console
+       
+test: 
+  env : Localhost      
+    
+logging:
+  file: ./log/${spring.application.name}.log    
+    
+    
+    
+    # 스페이스 구분자 2번이 하위 레벨로 구분함(yml)
+    
+    #localhost:8080/env
+    #localhost:8080/beans  @Component
+    #localhost:8080/autoconfig  @Configuration
+    
+    
+    
+    # 환경에따라 프로파일을 나눌수 있다.
+    # application.yml (공통)
+    # application-dev.yml(개발)
+    # application-default.yml(로컬)
+    # application-prod.yml(운영)

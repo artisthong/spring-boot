@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "test.string",
+  "type": "java.lang.String",
+  "description": "임의의 항목입니다.'"
+}]}

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: spring-boot-workshop-dev
+    
+logging:
+  path: ./log-dev
+  level:
+   root: warn 
