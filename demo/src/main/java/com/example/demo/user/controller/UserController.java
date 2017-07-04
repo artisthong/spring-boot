@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +20,8 @@ import com.example.demo.user.vo.User;
 @RestController
 @RequestMapping("/users")
 public class UserController {
-//	private Logger logger = LoggerFactory.getLogger(UserController.class);
+//	private Logger logger = LoggerFactory.getILoggerFactory()
+	private Logger logger = LoggerFactory.getLogger(UserController.class);
 	
 	private UserService userService;
 	
@@ -37,6 +40,7 @@ public class UserController {
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("user",user.getName());
+		logger.info("Session = "+session.getAttribute("user").toString());
 		return user;
 	}
 	
