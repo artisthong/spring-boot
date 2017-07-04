@@ -1,8 +1,17 @@
 package com.example.demo.user.vo;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class User {
+	@NotNull	
 	private int id;
+	
+	@Size(min=3,max=50)
 	private String name;
+	
+	@Max(200)
 	private int age;
 	
 	public int getId() {

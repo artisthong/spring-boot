@@ -2,6 +2,8 @@ package com.example.demo.user.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,17 +33,17 @@ public class UserController {
 	}
 	
 	@RequestMapping(path="",method=RequestMethod.POST)
-	public int createUser(@RequestBody User user){
+	public int createUser(@Valid @RequestBody User user){
 		return userService.insert(user);		
 	}
 	
 	@RequestMapping(path="",method=RequestMethod.PUT)
-	public int modifyUser(@RequestBody User user){
+	public int modifyUser(@Valid @RequestBody User user){
 		return userService.update(user);
 	}
 	
 	@RequestMapping(path="/{id}",method=RequestMethod.DELETE)
-	public int deleteUser(@PathVariable int id){
+	public int deleteUser(@Valid @PathVariable int id){
 		return userService.delete(id);
 	}
 	
