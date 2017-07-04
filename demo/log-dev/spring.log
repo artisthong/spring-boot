@@ -1,0 +1,2 @@
+2017-07-03 16:25:05.986  WARN 14744 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2017-07-03 16:28:01.258  WARN 3904 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
