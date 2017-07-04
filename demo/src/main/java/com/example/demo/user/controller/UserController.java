@@ -44,4 +44,9 @@ public class UserController {
 	public int deleteUser(@PathVariable int id){
 		return userService.delete(id);
 	}
+	
+	@RequestMapping(path="exception",method=RequestMethod.GET)
+	public String occurServerError() throws Exception{
+		throw new Exception();
+	}
 }
