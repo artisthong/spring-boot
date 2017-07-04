@@ -22559,3 +22559,9 @@ Unconditional classes:
 2017-07-04 13:32:43.972 DEBUG 3300 --- [RMI TCP Connection(28)-127.0.0.1] o.s.b.a.e.jmx.EndpointMBeanExporter      : Unregistering JMX-exposed beans on shutdown
 2017-07-04 13:32:43.974 DEBUG 3300 --- [RMI TCP Connection(28)-127.0.0.1] o.s.b.a.e.jmx.EndpointMBeanExporter      : Unregistering JMX-exposed beans
 2017-07-04 13:32:43.974  INFO 3300 --- [RMI TCP Connection(28)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-04 15:31:00.636  INFO 20812 --- [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2017-07-04 15:31:00.636  INFO 20812 --- [RMI TCP Connection(17)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Tue Jul 04 15:19:32 KST 2017]; root of context hierarchy
+2017-07-04 15:31:00.636  INFO 20812 --- [RMI TCP Connection(17)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-07-04 15:31:00.636 DEBUG 20812 --- [RMI TCP Connection(17)-127.0.0.1] o.s.b.a.e.jmx.EndpointMBeanExporter      : Unregistering JMX-exposed beans on shutdown
+2017-07-04 15:31:00.636 DEBUG 20812 --- [RMI TCP Connection(17)-127.0.0.1] o.s.b.a.e.jmx.EndpointMBeanExporter      : Unregistering JMX-exposed beans
+2017-07-04 15:31:00.636  INFO 20812 --- [RMI TCP Connection(17)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
